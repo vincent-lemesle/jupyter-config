@@ -1,9 +1,14 @@
 # Configuration file for jupyter-notebook.
-c.NotebookApp.tornado_settings = {
-    'headers': {
-        'Content-Security-Policy': "frame-ancestors http://localhost:3000 'self' "
+c.NotebookApp.tornado_settings = [
+    {
+        'headers': {
+            'Content-Security-Policy': "frame-ancestors http://localhost:3000 'self' "
+    },
+    {
+        'headers': {
+            'Content-Security-Policy': "frame-ancestors http://192.168.15.20:3000 'self' "
     }
-}
+}]
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
 #------------------------------------------------------------------------------
